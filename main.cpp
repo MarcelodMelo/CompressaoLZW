@@ -49,13 +49,14 @@ int main()
         saidaDecodificada = d1.decodificando(codigo);
         if(opcao == 1){
             cout << "Decodificacao da string comprimida resultou na seguinte string: " << saidaDecodificada << endl;
-        }
-        if(opcao == 2){
             std::ofstream saida;
             saida.open ("Decodificado.txt");
             saida << saidaDecodificada;
             saida.close();
             cout << "Decodificacao da string comprimida salva no arquivo Decodificado.txt"<<endl;
+        }
+        if(opcao == 2){
+            return 0;
         }
     }
     return 0;
