@@ -8,19 +8,18 @@ using namespace std;
 
 int main()
 {
-
     cout <<"-Algoritmo de Compressao LZW-\nDigite o nome do arquivo txt com a string a ser codificada"<<endl;
     string nomeArquivo;
     cin >> nomeArquivo;
-    std::ifstream entrada(nomeArquivo+".txt");
+    std::ifstream entrada(nomeArquivo+".txt"); //Pede pelo nome do arquivo de entrada para ler sua string
 
     string palavra;
     getline(entrada, palavra);
-    cout << endl<<"String dentro do arquivo: "<< palavra<<endl;
+    cout << endl<<"String dentro do arquivo: "<< palavra<<endl; //Imprime a string dentro do txt
 
-    Dicionario d1;// Dicionario de simbolos criado com TAM elementos
+    Dicionario d1;// Dicionario criado
     vector<int> codigo;
-    codigo = d1.codificando(palavra);
+    codigo = d1.codificando(palavra); // resultado da compressão da string
 
     cout<<"Deseja\n1)Imprimir a string comprimida na tela\n2)Imprimir a string comprimida em um arquivo de saida?"<<endl;
     int opcao;
